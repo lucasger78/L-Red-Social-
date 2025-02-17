@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monomakh&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo-L.png" type="image/x-icon">
+    <title>Red Social L</title>
+</head>
+<body>
+    <header>
+        <div class="logoBrand">
+            <img src="logo-L.png" alt="" class="logo" href="#">
+        </div>
+    </header>
+    
+    <h1>Welcome to <span class="l">L</span> (Tu Red Social)</h1>  
+
+    <h2>Postear</h2>
+    <form id="postForm" onsubmit="event.preventDefault(); postData()">
+        <label for="postTitle" class="titlePost">Título:</label>
+        <input type="text" name="postTitle" id="postTitle" required>
+        <label for="postBody">Qué estás pensando?</label>
+        <textarea type="text" name="postBody" id="postBody" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Ver Posteos</h2>
+    <button onclick="getData()">Ver Posteos</button>
+    <ul id="postList"></ul>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
