@@ -12,6 +12,8 @@ function getData(){
     .catch(error => alert('Error: ', error));
 }
 
+getData();
+
 function renderPostList(){
     const postList = document.getElementById('postList');
     postList.innerHTML = '';
@@ -65,7 +67,7 @@ function postData(){
     })
     .then(res => res.json())
     .then(data => {
-        posts.push(data)
+        posts.unshift(data)//ponemos unshift para que el post que se agrega se agregue al principio y no al final como lo hace con push
         renderPostList(); 
         postTitleInput.value = ''       
         postBodyInput.value = ''       
