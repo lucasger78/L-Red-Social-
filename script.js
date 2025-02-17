@@ -110,3 +110,20 @@ function updatePost(id){
     .catch(error => alert('Error', error))
 
 }
+
+
+//ELIMINAR POST
+function deletePost(id){
+    fetch(`${urlBase}/${id}`,{
+        method: 'DELETE'        
+    })
+    .then(res =>{
+        if(res.ok){
+            posts = posts.filter(post => post.id != id)
+            renderPostList()
+        }else{
+            alert('Error al eliminar el posteo')
+        }
+    })
+    .catch(error => alert('Error', error))
+}
